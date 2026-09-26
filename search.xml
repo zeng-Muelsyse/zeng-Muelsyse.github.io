@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>代码测试</title>
+    <url>/2026/09/24/%E4%BB%A3%E7%A0%81%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[function a ()&#123;    console.log(&quot;hello world&quot;)&#125; 
+
+二级标题哈哈哈哈哈哈哈哈哈哈哈哈
+三级标题哈哈哈哈哈哈哈哈哈哈哈
+三级标题哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+]]></content>
+  </entry>
+  <entry>
+    <title>我的第一篇博客</title>
+    <url>/2026/09/23/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[博客初成 自己的个人博客终于搭建的差不多了！昨天晚上做了半天的评论系统还是没做成，在vercel部署上面卡住了，不过基础的东西该有的都做的差不多了。
+一些感悟 以前点开各种各样的网站，每个网站都有不同的样式，让我感觉搭建一个网站也不过如此，但真正上手之后，出现了各种报错，大部分报错是本地运行没有问题之后，最后上写的时候无法取得与GitHub仓库的链接，小部分是因为vscode缩进的问题，还有各种杂七杂八的报错。这还只是套用了别人的模板，已经不敢想象不依靠第三方的资源搭建网站的困难程度了。 ＃花果山 虽然估计我的个人博客没有什么人看，但它的存在却让我拥有了一种“想干啥就可以干啥”的自由感。我可以在里面记录自己的学习过程，在书写中理清思路，一步步记下遇到的报错与尝试，慢慢逼近真相。以后再遇到类似的问题时，回头翻一翻这些记录，估计能省下不少时间。
+感谢 首先在这里要感谢给我提供各种资源的大佬们，从科学上网、hexo的搭建，让一个基础小白也能拥有一个属于自己的个人网站；还要感谢我的朋友们，耐心的点开我的链接，给我各种建议。
+ 
+]]></content>
+      <categories>
+        <category>博客</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2026/09/23/hello-world/</url>
     <content><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
@@ -17,31 +43,5 @@ Deploy to remote sites$ hexo deploy
 
 More info: Deployment
 ]]></content>
-  </entry>
-  <entry>
-    <title>代码测试</title>
-    <url>/2026/09/24/%E4%BB%A3%E7%A0%81%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[function a ()&#123;    console.log(&quot;hello world&quot;)&#125; 
-
-二级标题哈哈哈哈哈哈哈哈哈哈哈哈
-三级标题哈哈哈哈哈哈哈哈哈哈哈
-三级标题哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2026/09/23/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[博客初成 自己的个人博客终于搭建的差不多了！昨天晚上做了半天的评论系统还是没做成，在vercel部署上面卡住了，不过基础的东西该有的都做的差不多了。
-一些感悟 以前点开各种各样的网站，每个网站都有不同的样式，让我感觉搭建一个网站也不过如此，但真正上手之后，出现了各种报错，大部分报错是本地运行没有问题之后，最后上写的时候无法取得与GitHub仓库的链接，小部分是因为vscode缩进的问题，还有各种杂七杂八的报错。这还只是套用了别人的模板，已经不敢想象不依靠第三方的资源搭建网站的困难程度了。 ＃花果山 虽然估计我的个人博客没有什么人看，但它的存在却让我拥有了一种“想干啥就可以干啥”的自由感。我可以在里面记录自己的学习过程，在书写中理清思路，一步步记下遇到的报错与尝试，慢慢逼近真相。以后再遇到类似的问题时，回头翻一翻这些记录，估计能省下不少时间。
-感谢 首先在这里要感谢给我提供各种资源的大佬们，从科学上网、hexo的搭建，让一个基础小白也能拥有一个属于自己的个人网站；还要感谢我的朋友们，耐心的点开我的链接，给我各种建议。
- 
-]]></content>
-      <categories>
-        <category>博客</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
-        <tag>Hexo</tag>
-      </tags>
   </entry>
 </search>
