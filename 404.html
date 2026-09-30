@@ -328,27 +328,39 @@
     btf.addGlobalFn('pjaxComplete', () => newestComments.newestCommentInit(name, getComment), name)
   }
 }</script><script>window.addEventListener('load', () => {
-  const keyName = 'waline-newest-comments'
+  const keyName = 'twikoo-newest-comments'
   const { changeContent, generateHtml, run } = window.newestComments
 
-  const getComment = async (ele) => {
-    try {
-      const res = await fetch('https://waline-zeng17.vercel.app/api/comment?type=recent&count=6')
-      const result = await res.json()
-      const walineArray = result.data.map(e => {
-        return {
-          'content': changeContent(e.comment),
-          'avatar': e.avatar,
-          'nick': e.nick,
-          'url': e.url + '#' + e.objectId,
-          'date': e.time || e.insertedAt
-        }
+  const getComment = ele => {
+    const runTwikoo = () => {
+      twikoo.getRecentComments({
+        envId: 'https://twikoo-api1-beta.vercel.app',
+        region: '',
+        pageSize: 6,
+        includeReply: true
+      }).then(res => {
+        const twikooArray = res.map(e => {
+          return {
+            'content': changeContent(e.comment),
+            'avatar': e.avatar,
+            'nick': e.nick,
+            'url': e.url + '#' + e.id,
+            'date': new Date(e.created).toISOString()
+          }
+        })
+
+        btf.saveToLocal.set(keyName, JSON.stringify(twikooArray), 10/(60*24))
+        generateHtml(twikooArray, ele)
+      }).catch(err => {
+        console.error(err)
+        ele.textContent= "无法获取评论，请确认相关配置是否正确"
       })
-      btf.saveToLocal.set(keyName, JSON.stringify(walineArray), 10/(60*24))
-      generateHtml(walineArray, ele)
-    } catch (err) {
-      console.error(err)
-      ele.textContent= "无法获取评论，请确认相关配置是否正确"
+    }
+
+    if (typeof twikoo === 'object') {
+      runTwikoo()
+    } else {
+      btf.getScript('https://cdn.jsdelivr.net/npm/twikoo@1.7.15/dist/twikoo.all.min.js').then(runTwikoo)
     }
   }
 
