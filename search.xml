@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>代码测试</title>
+    <url>/2026/09/24/%E4%BB%A3%E7%A0%81%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[function a ()&#123;    console.log(&quot;hello world&quot;)&#125; 
+
+二级标题哈哈哈哈哈哈哈哈哈哈哈哈
+三级标题哈哈哈哈哈哈哈哈哈哈哈
+三级标题哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+]]></content>
+  </entry>
+  <entry>
     <title>我的第一篇博客</title>
     <url>/2026/09/23/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[博客初成 自己的个人博客终于搭建的差不多了！昨天晚上做了半天的评论系统还是没做成，在vercel部署上面卡住了，不过基础的东西该有的都做的差不多了。
@@ -16,15 +26,5 @@
         <tag>随笔</tag>
         <tag>Hexo</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>代码测试</title>
-    <url>/2026/09/24/%E4%BB%A3%E7%A0%81%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[function a ()&#123;    console.log(&quot;hello world&quot;)&#125; 
-
-二级标题哈哈哈哈哈哈哈哈哈哈哈哈
-三级标题哈哈哈哈哈哈哈哈哈哈哈
-三级标题哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-]]></content>
   </entry>
 </search>
