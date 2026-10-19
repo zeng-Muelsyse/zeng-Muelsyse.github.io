@@ -1,0 +1,107 @@
+/* A quiet Rhine / Muelsyse-inspired scene. Original background files stay intact. */
+#page-header.full_page.ecology-home {
+  isolation: isolate;
+  background-attachment: scroll;
+}
+.ecology-scene {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  background-size: 0 0;
+  background-repeat: no-repeat;
+  --ecology-image-y: 0px;
+  --ecology-light-y: 0px;
+  --ecology-water-y: 0px;
+  --ecology-fronds-y: 0px;
+  --ecology-notes-y: 0px;
+  --ecology-notes-opacity: 1;
+}
+.ecology-scene__image,
+.ecology-scene__light,
+.ecology-scene__water,
+.ecology-scene__fronds { position: absolute; inset: 0; }
+.ecology-scene__image {
+  background-image: inherit;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: translate3d(0, var(--ecology-image-y), 0);
+}
+.ecology-scene__light {
+  inset: -8% -4%;
+  opacity: .34;
+  background: radial-gradient(ellipse at 78% 12%, rgba(221, 246, 225, .22), transparent 53%);
+  transform: translate3d(0, var(--ecology-light-y), 0);
+}
+.ecology-scene__water {
+  top: 42%; bottom: -12%;
+  background: url('/img/parallax/water-contours.svg') center bottom / cover no-repeat;
+  opacity: .58;
+  transform: translate3d(0, var(--ecology-water-y), 0);
+}
+.ecology-scene__fronds {
+  top: auto; bottom: -5%; height: 40%;
+  background: url('/img/parallax/ecology-fronds.svg') center bottom / 100% auto no-repeat;
+  opacity: .66;
+  transform: translate3d(0, var(--ecology-fronds-y), 0);
+}
+/* Restrained shade for readability, not a recoloring of the illustration. */
+#page-header.full_page.ecology-home::before {
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(12, 25, 24, .22), rgba(12, 25, 24, .1) 38%, rgba(12, 25, 24, .26));
+}
+#page-header.full_page.ecology-home #site-info {
+  z-index: 2;
+  transform: translate3d(0, var(--ecology-title-y, 0px), 0);
+}
+#page-header.full_page.ecology-home #site-title {
+  letter-spacing: .13em;
+  text-shadow: 0 2px 18px rgba(9, 31, 25, .38);
+}
+#page-header.full_page.ecology-home #site-subtitle {
+  text-shadow: 0 1px 8px rgba(9, 31, 25, .65);
+}
+#page-header.full_page.ecology-home #scroll-down { z-index: 3; }
+.ecology-scene__notes,
+.ecology-scene__coordinate {
+  position: absolute;
+  bottom: 9%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: rgba(244, 255, 249, .85);
+  text-shadow: 0 1px 6px rgba(9, 31, 25, .65);
+  font: 10px/1.8 ui-monospace, SFMono-Regular, Consolas, monospace;
+  letter-spacing: .16em;
+  opacity: var(--ecology-notes-opacity);
+  transform: translate3d(0, var(--ecology-notes-y), 0);
+}
+.ecology-scene__notes { left: 4.5%; }
+.ecology-scene__coordinate { right: 4.5%; text-align: right; }
+.ecology-scene__rule { width: 42px; height: 1px; background: rgba(223, 246, 231, .55); }
+.ecology-scene__caption { font-size: 9px; letter-spacing: .12em; }
+.ecology-scene__coordinate span:last-child { font-size: 11px; letter-spacing: .2em; }
+/* Hint layers only during motion-enabled operation, not throughout the page. */
+.ecology-motion .ecology-scene__image,
+.ecology-motion .ecology-scene__water,
+.ecology-motion .ecology-scene__fronds { will-change: transform; }
+.ecology-motion #site-info { will-change: transform; }
+@media (max-width: 767px) {
+  #page-header.full_page.ecology-home { height: 100svh; min-height: 420px; }
+  .ecology-scene__notes { bottom: 12%; left: 6%; }
+  .ecology-scene__caption, .ecology-scene__coordinate { display: none; }
+  .ecology-scene__fronds { height: 28%; background-size: auto 100%; opacity: .4; }
+  .ecology-scene__water { opacity: .32; background-size: auto 100%; }
+  #page-header.full_page.ecology-home #site-title { letter-spacing: .08em; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ecology-scene__image, .ecology-scene__light, .ecology-scene__water,
+  .ecology-scene__fronds, .ecology-scene__notes, .ecology-scene__coordinate,
+  #page-header.full_page.ecology-home #site-info { transform: none !important; will-change: auto; }
+  .ecology-scene__notes, .ecology-scene__coordinate { opacity: 1; }
+  #page-header.full_page.ecology-home .scroll-down-effects { animation: none; }
+}

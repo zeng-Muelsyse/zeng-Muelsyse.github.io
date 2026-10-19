@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 500" fill="none">
+<!-- Original water contours, deliberately quiet against the existing illustration. -->
+<g stroke="#daeee6" stroke-width=".8" opacity=".38">
+<ellipse cx="1290" cy="350" rx="263" ry="50" transform="rotate(-12 1290 350)"/>
+<ellipse cx="1290" cy="350" rx="214" ry="36" transform="rotate(-12 1290 350)"/>
+<ellipse cx="1290" cy="350" rx="155" ry="23" transform="rotate(-12 1290 350)"/>
+<path d="M-70 323Q139 237 360 310T845 328M-50 344Q152 262 363 331T844 350" opacity=".7"/>
+</g><g fill="#e6f5e7" opacity=".65"><circle cx="110" cy="132" r="2"/><circle cx="279" cy="243" r="1.5"/><circle cx="1370" cy="134" r="2"/><circle cx="1228" cy="271" r="1.5"/><circle cx="1480" cy="224" r="1"/></g></svg>
